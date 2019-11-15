@@ -66,7 +66,7 @@ We will discuss how to create a `crx` application step by step, at the end of th
 8. Go to Linker ->Input, select `Module Definition File` and add `<sdkpath>\inc\AcRxDefault.def`
 
 
-   ![linklibs](images/linklibs.gif)
+   ![linklibs](images/_linklibs.gif)
 
  ![step6](images/step6.jpg)
 
@@ -75,7 +75,7 @@ We will discuss how to create a `crx` application step by step, at the end of th
 9. Go to C/C++ ->Code Generation, select `Runtime Library` pick `Multi-Threaded DLL` from combo box. This indicates our multithreaded module is a Dynamically linked and specifies retail version of run-time library. 
 NOTE: ObjectARX or CRX application are developed against release version of AutoCAD. Hence it is important to set run-time library to `/MD` not `/MDd`.
 
- ![step7](images/step7.jpg)
+ ![step7](images/_step7.jpg)
 
 10. We are not including `acad.lib`, this what makes a significant different from a regular ARX application, `acad.lib` contains definitions of AutoCAD UI.
 
@@ -215,7 +215,7 @@ NOTE: ObjectARX or CRX application are developed against release version of Auto
 
 3.  This will copy the `.crx` from /x64/debug/ into .bundle/Contents folder, then use [7zip](https://www.7-zip.org/) to create a zip, then finally copy the ZIP into /bundles folders of the ForgeCrxApp. 
 
-   ![step9](images/step9.JPG)
+   ![step9](images/_step9.JPG)
 
    4.  If you build the `ForgeCrxApp` project now you should see something like this on the **Output** window. Note the 2 folders and 2 files zipped. The zip file is created directly at the /bundles folder. This means you're doing great! 
 
