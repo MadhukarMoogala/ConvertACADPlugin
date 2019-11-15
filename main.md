@@ -215,7 +215,7 @@ NOTE: ObjectARX or CRX application are developed against release version of Auto
 
 3.  This will copy the `.crx` from /x64/debug/ into .bundle/Contents folder, then use [7zip](https://www.7-zip.org/) to create a zip, then finally copy the ZIP into /bundles folders of the ForgeCrxApp. 
 
-   ![step9](images/_step9.JPG)
+   ![step9](images/_step9.jpg)
 
    4.  If you build the `ForgeCrxApp` project now you should see something like this on the **Output** window. Note the 2 folders and 2 files zipped. The zip file is created directly at the /bundles folder. This means you're doing great! 
 
