@@ -19,11 +19,11 @@ We will discuss how to create a `crx` application step by step, at the end of th
 
 5. Click OK
 
-   ![step1](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/step1.jpg)
+   ![step1](images/step1.jpg)
    
    
    
-   ![step2](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/step2.jpg)
+   ![step2](images/step2.jpg)
    
    
 #### Step 2: Create Project
@@ -31,11 +31,11 @@ We will discuss how to create a `crx` application step by step, at the end of th
 
 2. Remove the dllMain.cpp from Source Files, this file is unimportant.
 
-   ![step3](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/step3.jpg)
+   ![step3](images/step3.jpg)
    
 3. Change the Debug Configuration from x86 to x64.
 
-   ![step4](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/step4.jpg)
+   ![step4](images/step4.jpg)
    
 4. Build the Solution, your build should succeed, and following output will displayed in your Output window.
 
@@ -55,7 +55,7 @@ We will discuss how to create a `crx` application step by step, at the end of th
 3. Configuration Properties->C/C++->General
 4. Select `Additional Include Directories` and enter your SDK Path
 
- ![step5](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/step5.jpg)
+ ![step5](images/step5.jpg)
 
 5. Go to Linker \ Input
 6. Select `Additional Dependencies`,  add following minimum required libraries `ac1st23.lib
@@ -66,16 +66,16 @@ We will discuss how to create a `crx` application step by step, at the end of th
 8. Go to Linker ->Input, select `Module Definition File` and add `<sdkpath>\inc\AcRxDefault.def`
 
 
-   ![linklibs](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/linklibs.gif)
+   ![linklibs](images/linklibs.gif)
 
- ![step6](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/step6.jpg)
+ ![step6](images/step6.jpg)
 
 
 
 9. Go to C/C++ ->Code Generation, select `Runtime Library` pick `Multi-Threaded DLL` from combo box. This indicates our multithreaded module is a Dynamically linked and specifies retail version of run-time library. 
 NOTE: ObjectARX or CRX application are developed against release version of AutoCAD. Hence it is important to set run-time library to `/MD` not `/MDd`.
 
- ![step7](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/step7.jpg)
+ ![step7](images/step7.jpg)
 
 10. We are not including `acad.lib`, this what makes a significant different from a regular ARX application, `acad.lib` contains definitions of AutoCAD UI.
 
@@ -181,7 +181,7 @@ NOTE: ObjectARX or CRX application are developed against release version of Auto
 
    2. Build the solution, before that change the extension of the module to `.crx`.
 
-      ![BuildCrx](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/BuildCrx.gif)
+      ![BuildCrx](images/BuildCrx.gif)
 
 #### Step5: Creating Bundle Package
 1. Create a folder named `HelloWorld.bundle` and, inside, a file named PackageContents.xml, then copy the following content to it. Learn more at the PackageContents.xml [Format Reference](https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2016/ENU/AutoCAD-Customization/files/GUID-BC76355D-682B-46ED-B9B7-66C95EEF2BD0-htm.html). This file defines the new AutoCAD custom command `Bonjour` that will be called when Design Automation executes.
@@ -203,7 +203,7 @@ NOTE: ObjectARX or CRX application are developed against release version of Auto
 
  Finally, create a subfolder named `Contents` and leave it empty. At this point, the project should look like: 
 
-![step8](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/step8.jpg)
+![step8](images/step8.jpg)
 
 2. Now we need to ZIP the .bundle folder. Right-click on the project, select **Properties**, then open **Build Events** and copy the following into **Post-build event command line** field, as shown on the image below.
 
@@ -215,7 +215,7 @@ NOTE: ObjectARX or CRX application are developed against release version of Auto
 
 3.  This will copy the `.crx` from /x64/debug/ into .bundle/Contents folder, then use [7zip](https://www.7-zip.org/) to create a zip, then finally copy the ZIP into /bundles folders of the ForgeCrxApp. 
 
-   ![step9](https://github.com/MadhukarMoogala/ConvertACADPlugin/tree/master/images/step9.JPG)
+   ![step9](images/step9.JPG)
 
    4.  If you build the `ForgeCrxApp` project now you should see something like this on the **Output** window. Note the 2 folders and 2 files zipped. The zip file is created directly at the /bundles folder. This means you're doing great! 
 
