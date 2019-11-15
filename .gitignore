@@ -3,6 +3,18 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
+# Project Specific
+
+Create a new project.html
+Create a new project.md
+ForgeCrxApp/
+convertplugin.md
+.~Create a new project.md
+main.pdf
+
+
+
 # User-specific files
 *.suo
 *.user
