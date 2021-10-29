@@ -184,7 +184,7 @@ NOTE: ObjectARX or CRX application are developed against release version of Auto
       ![BuildCrx](images/BuildCrx.gif)
 
 #### Step5: Creating Bundle Package
-1. Create a folder named `HelloWorld.bundle` and, inside, a file named PackageContents.xml, then copy the following content to it. Learn more at the PackageContents.xml [Format Reference](https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2016/ENU/AutoCAD-Customization/files/GUID-BC76355D-682B-46ED-B9B7-66C95EEF2BD0-htm.html). This file defines the new AutoCAD custom command `Bonjour` that will be called when Design Automation executes.
+1. Create a folder named `HelloWorld.bundle` and, inside, a file named PackageContents.xml, then copy the following content to it. Learn more at the PackageContents.xml [Format Reference](https://help.autodesk.com/view/OARX/2022/ENU/?guid=GUID-BC76355D-682B-46ED-B9B7-66C95EEF2BD0). This file defines the new AutoCAD custom command `Bonjour` that will be called when Design Automation executes.
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
